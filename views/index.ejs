@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Super Heroes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    
+    <h1>Los Super Heroes </h1>
+        
+
+    <section>
+        <% losHeroes.forEach(heroe => { %>
+            <article> 
+                <h3><%= heroe.superhero %></h3>
+                <div class="article__alineacion-img">
+                    <img src="/images/<%= heroe.id %>.jpg" alt="Imagen de <%= heroe.superhero %>">
+                </div>
+                <ul>
+                    <li> <strong>Publisher:</strong>  <a href="/publisher/<%= heroe.publisher %>"> <%= heroe.publisher %> </a>     </li>
+                    <li> <strong>ID:</strong>  <%= heroe.id %>  </li>
+                    <li> <strong>Alter ego:</strong>  <%= heroe.alter_ego %>  </li>
+                    <li> <strong>First appearance:</strong>   <%= heroe.first_appearance %>  </li>
+                    <li> <strong>Characters:</strong>  <%= heroe.characters %>  </li>
+                    
+                </ul>
+            </article>
+        <% }) %>
+    </section>  
+</body>
+</html>
