@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 const indexRouter = require("./routes/index.router");
 
-app.listen(serverPort, () => {
+app.listen(process.env.PORT || serverPort, () => {
     console.log("Express corriendo OK en el puerto", serverPort);
 })
 
