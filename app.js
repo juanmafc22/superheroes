@@ -13,3 +13,7 @@ app.listen(process.env.PORT || serverPort, () => {
 
 app.use("/", indexRouter);
 
+// add a genral route for 404 errors
+app.use((req, res, next) => {
+    res.status(404).send("Sorry can't find that!")
+})
